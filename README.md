@@ -2,7 +2,7 @@
 #android自定义view实现的柱状图
 
 示例：
- 
+![enter image description here](https://github.com/curtis2/SiminTableView/blob/master/file/device-2017-04-24-164531.gif)
 
 使用方法：
 
