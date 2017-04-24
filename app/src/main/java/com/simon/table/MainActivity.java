@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chart);
        barChart= (ColumnarChart) findViewById(R.id.bar_chart);
-            //用户所在的组
+        //选中的柱子
         float userAtgroup=600;
-         //最大的组
+         //最大的柱子
         float maxGroup=790;
+        //柱子数值的比例数组
         float[] defaultRects=new float[]{300,215,475,500,535,615,655,690,690,740,790,715,660,600,520,470,400,255};
         barChart.setParamsDefult(defaultRects,userAtgroup,maxGroup);
     }
