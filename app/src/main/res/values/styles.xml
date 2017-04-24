@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="columnarchart_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="columnarCoordinatesLineWidth">1px</item>
+        <item name="columnarXcoordinatesTextSize">12dp</item>
+        <item name="columnarXcoordinatesTextColor">#b8c0cb</item>
+
+        <item name="columnarXIndicateTextSize">12dp</item>
+        <item name="columnarXIndicateTextColor">#999999</item>
+        <item name="indicateAverageCircleradius">1dp</item>
+
+        <item name="columnarNormalColor">#A6D3E3</item>
+        <item name="columnarSelectColor">#f1453b</item>
+        <item name="columnarSpace">2dp</item>
+    </style>
+
+</resources>

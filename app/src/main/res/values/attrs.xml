@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--坐标轴线条粗细-->
+    <attr name="columnarCoordinatesLineWidth" format="dimension"/>
+    <!--坐标轴字体大小-->
+    <attr name="columnarXcoordinatesTextSize" format="dimension" />
+    <!--x坐标轴轴字体颜色-->
+    <attr name="columnarXcoordinatesTextColor" format="color" />
+
+    <!--指示文字的字体大小-->
+    <attr name="columnarXIndicateTextSize" format="dimension" />
+    <!--指示文字的字体颜色-->
+    <attr name="columnarXIndicateTextColor" format="color" />
+    <!--指示圆点半径-->
+    <attr name="indicateAverageCircleradius" format="dimension" />
+
+    <!--柱子普通的颜色-->
+    <attr name="columnarNormalColor" format="color" />
+    <!--柱子选中的颜色-->
+    <attr name="columnarSelectColor" format="color" />
+    <!--柱子间的间距-->
+    <attr name="columnarSpace" format="dimension" />
+
+
+
+    <declare-styleable name="ColumnarChart">
+        <attr name="columnarCoordinatesLineWidth"/>
+        <attr name="columnarXcoordinatesTextSize"/>
+        <attr name="columnarXcoordinatesTextColor"/>
+
+        <attr name="columnarXIndicateTextSize"/>
+        <attr name="columnarXIndicateTextColor"/>
+        <attr name="indicateAverageCircleradius"/>
+
+        <attr name="columnarNormalColor"/>
+        <attr name="columnarSelectColor"/>
+        <attr name="columnarSpace"/>
+    </declare-styleable>
+
+
+</resources>
