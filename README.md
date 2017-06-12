@@ -1,4 +1,4 @@
-![示例图片](https://github.com/curtis2/SiminTableView/blob/master/file/device-2017-04-24-171711.gif)
+![示例图片](https://github.com/curtis2/SimonTableView/blob/master/images/device-2017-06-12-155403.gif)
 
 使用方法：
 
