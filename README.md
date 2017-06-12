@@ -1,6 +1,3 @@
-@(博客)
-#android自定义view实现的柱状图
-
 ![示例图片](https://github.com/curtis2/SiminTableView/blob/master/file/device-2017-04-24-171711.gif)
 
 使用方法：
