@@ -1,5 +1,6 @@
 package com.simon.table.views;
 
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -22,6 +23,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 
 import com.simon.table.R;
 
@@ -307,29 +309,30 @@ public class ColumnarChart extends View{
 			  }
 			  rectlList.add(rectObject);
 			 }
-	       animationDrawChart();
+	       startAnimator();
 	}
-	
-	private void animationDrawChart() {
-		new Thread()  
-        {  
-            public void run()  
-            {  
-                while (xBaseLine+9>=columnarMaxPositon)  
-                {  
-                    postInvalidate();  
-                    try {
-						Thread.sleep(50);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-                }  
-            }
-        }.start();
+
+    public void startAnimator() {
+		ValueAnimator animator=ValueAnimator.ofInt(columnarMaxPositon,viewHeight);
+		final  int baseLine=viewHeight;
+		animator.setStartDelay(200);
+		animator.setDuration(1000);
+		animator.setInterpolator(new LinearInterpolator());
+		animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+			@Override
+			public void onAnimationUpdate(ValueAnimator animation) {
+				xBaseLine= baseLine-((int) animation.getAnimatedValue()-columnarCoordinatesLineWidth);
+				invalidate();
+			}
+		});
+		animator.start();
+    }
+
+	public void setxBaseLine(int xBaseLine) {
+		this.xBaseLine = xBaseLine;
 	}
-	
-	
+
+
 	/**
 	 * 计算柱状的宽度
 	 */
@@ -448,8 +451,6 @@ public class ColumnarChart extends View{
 		 barPaint.setColor(rectObject.getBackgroupColor());
 		 canvas.drawRect(r,barPaint);
       }
-	   //重置基准线
-	   xBaseLine-=9;
     //绘制选中的状态
 	  for (int i = 0; i <rectlList.size(); i++) {
 		  barPaint.reset();
